@@ -1,0 +1,9 @@
+<nav class="social-icons icons">
+<a class="fa fa-rss rss" href="/index.xml"></a>
+<%= if conf.params[:twitter_username] do %>
+<a class="fa fa-twitter twitter" href="https://twitter.com/<%= conf.params.twitter_username %>"></a>
+<% end %>
+<%= if conf.params[:facebook_username] do %>
+<a class="fa fa-facebook facebook" href="https://facebook.com/<%= conf.params.facebook_username %>"></a>
+<% end %>
+</nav>

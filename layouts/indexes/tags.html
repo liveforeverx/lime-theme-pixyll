@@ -1,0 +1,15 @@
+<%= partial "head.html" %>
+<div class="site-wrap">
+  <%= partial "header.html" %>
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+    <p><%= page.title %></p>
+    <ul>
+        <%= Enum.map(page.indexes, fn({key, values}) -> %>
+            <li><a href="<%= "#{page.index}/#{key}" %>"> <%= key %> </a> <%= Enum.count(values) %> </li>
+        <% end) %>
+    </ul>
+    </div>
+  </div>
+</div>
+<%= partial "footer.html" %>
