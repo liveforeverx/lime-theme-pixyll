@@ -8,7 +8,6 @@
   </a>
   <% baseurl = conf.base_url %>
   <p class="post-meta">Tags:&nbsp;
-  <%= Enum.map(page.tags, fn(tag) -> %>
-    <a href="<%= baseurl %>/tags/<%= tag %>"> <%= tag %> </a>
-  <% end) %></p>
+    <%= Stream.map(page.tags, &("<a href=\"#{baseurl}/tags/#{&1}\"> #{&1} </a>")) |> Enum.join(",&nbsp;") %>
+  </p>
 </div>
