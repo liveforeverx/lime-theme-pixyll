@@ -1,7 +1,7 @@
 <%= if conf.params[:disqus_shortname] do %>
 <div id="disqus_thread">
   <script type="text/javascript">
-     var disqus_shortname = " <%= conf.params.disqus_shortname %> ";
+     var disqus_shortname = "<%= conf.params.disqus_shortname %>";
      var disqus_identifier = "<%= page.rel_link %>";
 
      (function() {
