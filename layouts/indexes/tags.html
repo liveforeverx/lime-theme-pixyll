@@ -5,8 +5,8 @@
     <div class="measure">
     <p><%= page.title %></p>
     <ul>
-        <%= Enum.map(page.indexes, fn({key, values}) -> %>
-            <li><a href="<%= "#{page.index}/#{key}" %>"> <%= key %> </a> <%= Enum.count(values) %> </li>
+        <%= Enum.map(page.indexes, fn({key, page}) -> %>
+            <li><a href="<%= page.rel_link %>"> <%= key %> </a> <%= Enum.count(page.posts) %> </li>
         <% end) %>
     </ul>
     </div>
