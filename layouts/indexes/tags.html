@@ -6,7 +6,7 @@
     <p><%= page.title %></p>
     <ul>
         <%= Enum.map(page.indexes, fn({key, page}) -> %>
-            <li><a href="<%= page.rel_link %>"> <%= key %> </a> <%= Enum.count(page.posts) %> </li>
+            <li><a href="<%= page.link %>"> <%= key %> </a> <%= Enum.count(page.posts) %> </li>
         <% end) %>
     </ul>
     </div>
